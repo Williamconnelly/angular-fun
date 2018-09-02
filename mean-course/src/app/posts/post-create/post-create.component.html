@@ -3,11 +3,11 @@
   <!-- #postForm gives access to the angular form object -->
   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
     <mat-form-field>
-      <input matInput type="text" name="title" ngModel required minlength="3" #title="ngModel">
+      <input matInput type="text" name="title" ngModel required minlength="3" #title="ngModel" placeholder="Post Title">
       <mat-error *ngIf="title.invalid">Please Enter a Post Title</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <textarea matInput rows="4" name="content" ngModel required #content="ngModel"></textarea>
+      <textarea matInput rows="4" name="content" ngModel required #content="ngModel" placeholder="Post Content"></textarea>
       <mat-error *ngIf="content.invalid">Please Enter Post Content</mat-error>
     </mat-form-field>
     <button type="submit" mat-raised-button color="accent">Save Post</button>
